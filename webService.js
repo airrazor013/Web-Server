@@ -4,7 +4,7 @@ var port = 8080;
 var fs = require('fs');
 var bodyParser = require('body-parser');
 var url = require('url');
-var color = require('./clog.js');
+var color = require('./exports/clog.js');
 var clog = color.clog;
 
 
