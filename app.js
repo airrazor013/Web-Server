@@ -11,11 +11,13 @@ app.use(express.static('public'));
 
 app.use(function(req, res, next){
 	var host = req.hostname;
+	clog("Inbound request on: "+host, color.magenta);
 	switch(host){
+		case "ethanryoung.com":
+			req.pageDir = "./pages/ethanryoung";
+			break;
 		case "localhost":
 		case "camdent.net":
-		default:
-			clog("Inbound request on: "+host, color.magenta);
 			req.pageDir = "./pages/camdent";
 	}
 	next();
@@ -51,6 +53,5 @@ function sendError(path, res){
 }
 
 app.listen(port);
- 
+
 clog('Server started listening on '+port+' for requests.',color.blue);
-    
