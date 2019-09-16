@@ -1,18 +1,44 @@
+//Express variables
 var express = require("express");
 var app = express();
 var port = 8080;
-var fs = require('fs');
-var bodyParser = require('body-parser');
-var url = require('url');
-var color = require('./exports/clog.js');
-var clog = color.clog;
-var file = require('./exports/files.js');
-var ethanApi = require('./exports/ethanAPI.js');
-var camdenApi = require('./exports/camdenAPI.js');
 var api = null;
 var reqIP = null;
-app.use(express.static('public'));
 
+//Color log variables
+var color = require('./exports/clog.js');
+var clog = color.clog;
+
+//File reader/writer
+var file = require('./exports/files.js');
+
+//custom API for domains
+var ethanApi = require('./exports/ethanAPI.js');
+var camdenApi = require('./exports/camdenAPI.js');
+
+//Blacklist for ip's who spam
+var blacklist = require('./exports/blacklist.js');
+
+app.use(express.static('public'));
+app.use(express.json());
+
+app.use(function(req,res, next){
+	blacklist.check(req.ip, function(isBlackListed){
+		if(isBlackListed){
+			req.pause();
+			req.destroy();
+			res.destroy();
+			req = null;
+			res = null;
+		}
+		else {
+			next();
+		}
+	});
+});
+
+
+//Middleware to decide propper pages/api to use
 app.use(function(req, res, next){
 	var host = req.hostname;
 	reqIP = req.ip;

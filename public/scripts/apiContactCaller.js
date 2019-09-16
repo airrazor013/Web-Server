@@ -7,19 +7,22 @@ function sendData() {
 
   console.log(json);
 
-   $.ajax({
-      type: "POST",
-      url: "/api/contactMe",
-      contentType: "application/json",
-      processData: true,
-      data: {
-          o: json
-      },
-      success: function(data) {
-          //your code here
-      },
-      error: function(data) {
-          alert('Error');
-      }
-   });
+  if (object.name != "" && object.email != ""){
+         $.ajax({
+            type: "POST",
+            url: "/api/contactMe",
+            contentType: "application/json",
+            processData: true,
+            data: json,
+            success: function(data) {
+                window.location = "/index";
+            },
+            error: function(data) {
+                alert('Error');
+            }
+         });
+       }
+       else {
+         alert('One or more fields are empty.');
+       }
 }

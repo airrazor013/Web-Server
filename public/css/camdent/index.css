@@ -1,0 +1,33 @@
+.header{
+  display: flex;
+  border: 1px solid black;
+  border-radius: 6px;
+  background-color: #999999;
+}
+
+.picture{
+  float: left;
+  display:inline-block;
+  background-color: #222;
+  padding: 6px;
+  border-radius: 4px;
+}
+
+img{
+  display:block;
+  height: 350px;
+  border-radius: 4px;
+}
+
+.message{
+  float: right;
+  margin: 10px;
+  position: relative;
+}
+
+.subnote{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 12px;
+}
