@@ -1,0 +1,43 @@
+.formBody{
+  width: 750px;
+  margin: auto;
+  text-align: center;
+  border: 2px solid #E36161;
+  height : auto;
+}
+
+form {
+  width: 750px;
+  margin: auto;
+  font-size: 20px;
+  text-align: center;
+}
+
+button {
+  background-color: #E36161;
+  color: white;
+  font-size: 20px;
+  width: auto;
+  height: auto;
+}
+
+input[type=text] {
+  font-size: 20px;
+  border: 2px solid #E36161;
+}
+
+input[type=email] {
+  font-size: 20px;
+  border: 2px solid #E36161;
+}
+
+textarea{
+  font-size: 20px;
+  border: 2px solid #E36161;
+  width : 650px;
+  height : 200px;
+  max-width: 725px;
+}
+span{
+    color: #E36161;
+}

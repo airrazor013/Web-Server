@@ -1,0 +1,47 @@
+.left{
+  float:left;
+  display: inline-block;
+  width: 50%;
+  height:100%;
+}
+
+.right{
+  float: right;
+  display:inline-block;
+  width: 50%;
+  height:100%;
+}
+
+.project{
+    cursor: pointer;
+    width:fill;
+    background-color: #333;
+    border: 1px solid black;
+    border-radius: 5px;
+    display:block;
+    margin: 3px;
+}
+
+.title{
+  color:White;
+  border-bottom: 2px solid black;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  display:block;
+}
+
+.description{
+  display:block;
+  margin-top: 0;
+  background-color: #999999;
+  margin-bottom: 10px;
+  border-bottom: 2px solid black
+}
+
+.footer{
+  color:White;
+  display:block;
+  padding: 5px;
+}

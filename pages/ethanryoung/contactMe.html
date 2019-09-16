@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <title>Ethan Young</title>
-  <link rel="stylesheet" type="text/css" href="/css/eStyle.css"></link>
+  <link rel="stylesheet" type="text/css" href="/css/ethan/eStyle.css"></link>
+  <link rel="stylesheet" type="text/css" href="/css/ethan/form.css"></link>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
   <script src="/scripts/apiContactCaller.js"></script>
@@ -17,35 +18,36 @@
   <li>
      <a href="https://github.com/youngethan4">
 	   <span>
-	     <img src="images/github.png" class="github" />
+	     <img src="images/ethan/github.png" class="github" />
 	   </span>
 	 </a>
   </li>
   <li>
      <a href="https://www.linkedin.com/in/youngethan4/">
 	   <span>
-	     <img src="images/linkedin.png" class="linkedin" />
+	     <img src="images/ethan/linkedin.png" class="linkedin" />
 	   </span>
 	 </a>
   </li>
 </ul>
 
-<div class = "header" >
-  <p style = "font-size:100px; text-align: center;  margin-top: -10px; text-shadow: 5px 5px 0px #FFFFFF;">
-               <strong>Ethan Young</strong></p>
+<div class = "header" style="background-image: url('images/ethan/background.jpg');">
+  <p class = "ethanYoung"><strong>Ethan Young</strong></p>
 </div>
 
 <div class = "body">
-  <p style="font-size: 40px; text-align:center;"><strong>Send me a message:</strong></p>
-  <form  id="myForm">
-      <br>Name:<br>
+  <div class = "formBody">
+    <p style="font-size: 30px; text-align:center;"><strong>Send me a message:</strong></p>
+    <form  id="myForm">
+      Name:<span class="required">*</span><br>
       <input type="text" name="name"><br><br>
-      Email:<br>
+      Email:<span class="required">*</span><br>
       <input type="email" name="email"><br><br>
       Message:<br>
       <textarea name="message"></textarea><br><br>
-      <input type="submit" value="Send"><br>
-  <br></form>
+      </form>
+    <button value="Send" onclick="sendData()">Send</button><br><br>
+  </div>
 </div>
 
 </body>

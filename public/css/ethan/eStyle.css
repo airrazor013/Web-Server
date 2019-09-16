@@ -1,0 +1,110 @@
+body {
+  margin:0;
+  width: 100%;
+  height:100%;
+  background-color: #C0C0C0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #E36161;
+  position: fixed;
+  top: 150px;
+  width: 100%;
+}
+
+li {
+  float: left;
+  width: 20%;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background: #3F3D38;
+}
+
+.active {
+  background: #C0C0C0;
+  color: black;
+}
+
+.header {
+  color: #E36161;
+  background-position: center;
+  padding: 20px;
+  margin-top:-220px;
+  height:110px;
+  position:fixed;
+  width: 100%;
+}
+
+.ethanYoung{
+  font-size:100px;
+  text-align: center;
+  margin-top: -10px;
+  text-shadow: 5px 5px 0px #FFFFFF;
+}
+
+.github {
+	width : 35px;
+	hieght : 35px;
+	margin-top : 5px;
+	margin-left: 15px;
+	margin-right: 15px;
+	border: 2px solid white;
+    border-radius: 50px;
+}
+
+.linkedin {
+	width : 37px;
+	hieght : 37px;
+	margin-top : 7px;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+.body {
+  margin-top: 220px;
+  background-color: #C0C0C0;
+  height: 100%;
+  width: 100%;
+}
+
+.heading{
+  width: 900px;
+  font-size: 30px;
+  margin: auto;
+  text-align: center;
+}
+
+.text {
+  width: 900px;
+  font-size: 20px;
+  margin: auto;
+  text-align: left;
+}
+
+.project{
+  width: 900px;
+  margin: auto;
+  text-align: center;
+  border: 2px solid #E36161;
+  height : auto;
+}
+
+.ethanPNG{
+  margin-right: 15px;
+  float:left;
+  width:200px;
+  height:200px;
+  border: 2px solid #E36161;
+}
