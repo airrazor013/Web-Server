@@ -1,25 +1,46 @@
 var color = require("./clog.js");
 var clog = color.clog;
 var file = require("./files.js");
-var blacklist = {
-  0: "::ffff:134.90.149.139",
-  1: "::ffff:188.166.189.163",
-  2: "::ffff:103.133.104.71",
-}
 
-function isInBlacklist(ip, callback){
-    for(var key in blacklist){
-      if(ip == blacklist[key]){
+function isInBlacklist(req, callback){
+  var ip = req.ip;
+  file.read(__dirname+"/../logs/", "blacklist.txt", function(data){
+    var list = data.toString().split("\n");
+    for(var i = 0; i < list.length; i++){
+      if(ip.toString() == list[i].toString().trim()){
         clog("BLACKLIST IP DETECTED!",color.red);
         file.write(__dirname + "/../logs/", "banHammer.txt",
-        "Blacklisted ip request blocked: "+ip+"\nTimestamp: " + Date.now() +"\n\n", true);
+        "Timestamp: " + Date.now() +"\n"+
+        "Blacklisted ip request blocked: "+ip+"\n"+
+        "Requested page: "+req.hostname+req.path+"\n\n", true);
         callback(true);
         return;
       }
     }
+    if(shouldAutoBan(req)){
+      callback(true);
+      return;
+    }
     callback(false);
+  });
 }
 
+function shouldAutoBan(req){
+  var path = req.path.toString();
+  if(path.includes(".php")||
+     path.includes(".xml")||
+     path.includes(".js")||
+     path.includes("/cms/")||
+     path.includes("/shell")||
+     path.includes(".asp")){
+       clog("Blacklisting: " + req.ip, color.red);
+       file.write(__dirname+"/../logs/","blacklist.txt", req.ip+"\n",true);
+       return true;
+     }
+     return false;
+
+
+}
 module.exports = {
   check: isInBlacklist
 }

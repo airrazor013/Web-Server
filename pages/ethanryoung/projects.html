@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <title>Ethan Young</title>
   <link rel="stylesheet" type="text/css" href="/css/ethan/eStyle.css">
+    <link rel="stylesheet" type="text/css" href="/css/ethan/projects.css">
 </head>
 <body>
 
@@ -33,17 +34,62 @@
 
 <div class = "body">
   <div class = "project">
-    <p style="font-size:40px;"><strong>AllOne</strong></p>
+    <br/><h1 class="heading"><strong>All in One</strong></h1>
+    <p class="textProject"> This app is my personal project
+        that is connected to my personal back-end server to allow for users to create accounts.
+        This will be used in future implementations to expand to a multiplayer setting. The first
+        picture is the login fragment which users can swipe on to get to the create user fragment.</p>
+    <p class="textProject">The second picture is of the
+        home page which allows users to choose from 20 or 30 cards to play. It also includes an options
+        menu attached. Here users can mute music or sound, change the theme, or edit their profile.
+        The theme activity allows users to change the entire theme of the app. The edit profile activity
+        allows users to change their username, password, or icon.</p>
+    <img class="image" src="images/ethan/login.png"/>
+    <img class="image" src="images/ethan/settings.png"/>
+    <img class="image" src="images/ethan/memory.png"/>
+    <p class="textProject">The third picture is of the game its self. The cards are randomized
+        by putting each one in an array list and calling the java shuffle command. They are
+        then setup into a grid view as shown. A timer is used to record the score of the round
+        which will be put on the back-end server.</p>
   </div>
   <div class = "project">
-    <p style="font-size:40px;"><strong>DrinkersChoice</strong></p>
+    <br/><h1 class="heading"><strong>Drinker's Choice</strong></h1><br/>
+    <p class="textProject">Drinker's Choice was another app I did as a class project that
+        really got me into Android development. Drinker's Choice was an app made for people
+        to post drinks, get rides, and see business promotions. Throughout the project,
+        I worked on front-end development making the login and create user activities that
+        would sign 3 different types of users in. I also helped with the endpoint and server
+        commnication classes and created the websocket seen in the first picture below.</p>
+    <img class="image" src="images/ethan/websocket.png"/>
+    <img class="image" src="images/ethan/comments.png"/>
+    <p class="textProject">I also created the comments activity seen in the second photo. It had
+        functionality for users to up vote, down vote, and leave comments on the posts. There
+        where still some bugs that would have been squashed given enough time. This was my
+        fist major software team project and first time I lead a software team project.</p>
   </div>
   <div class = "project">
-    <p style="font-size:40px;"><strong>HackISU Fall 2019</strong></p>
+    <br/><h1 class="heading"><strong>HackISU Fall 2019</strong></h1><br/>
+    <p class="textProject">At HackISU last November, my team achieved first place in hardware
+        hack and first place in ethical hack. I was tasked with implemeting the gpio binary inputs
+        from the arduino and converting them into characters and creating two strings. One was
+        used as a key for the encryption and the other was used for the initialization vector.
+        I also helped with the other gpio inputs and outputs.</p>
+    <img class="image" src="images/ethan/secret.png"/>
+    <p class="textProject">The main purpose was to get a truely random string as a key from
+        the enviornment using a microphone. Using this key, a file would be encrypted then
+        the key and encrypted file would be hidden in pictures on different drives.
+        If you would like to read more, go
+        <a href="https://devpost.com/software/secret-prv9bq" style="color:#E36161;">here.</a></p>
   </div>
   <div class = "project">
-    <p style="font-size:40px;"><strong>Senior Design Project</strong></p>
-  </div>
+    <br/><h1 class="heading"><strong>Web Server</strong></h1><br/>
+    <p class=textProject>This website you are viewing now is hosted on my personal server
+        just like my app All in One. The backend is coded in node.js and is setup to host multiple
+        domains. I have been working on this with my friend, <a href="camdent.net" style="color:#E36161;">
+        Camden Thomas</a>. The backend is set up in a way that
+        adding a new webpage is as easy as putting the html file in the correct directory. I also
+        created a function to send emails to an email account when someone contacts me through this site.</p>
+  </div><br /><br />
 </div>
 
 </body>

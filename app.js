@@ -1,6 +1,9 @@
 //Express variables
 var express = require("express");
 var app = express();
+app.use(express.static('public'));
+app.use('*/favicon.ico', express.static('public/favicon.png'));
+app.use(express.json());
 var port = 8080;
 var api = null;
 var reqIP = null;
@@ -19,17 +22,12 @@ var camdenApi = require('./exports/camdenAPI.js');
 //Blacklist for ip's who spam
 var blacklist = require('./exports/blacklist.js');
 
-app.use(express.static('public'));
-app.use(express.json());
-
-app.use(function(req,res, next){
-	blacklist.check(req.ip, function(isBlackListed){
+//Kill's request and response if ip is in the blacklist
+app.use(function(req, res, next){
+	blacklist.check(req, function(isBlackListed){
 		if(isBlackListed){
-			req.pause();
-			req.destroy();
-			res.destroy();
-			req = null;
-			res = null;
+			clog("Blacklisted ip attempted to contact: "+req.path, color.red);
+			sendPage("./pages/","blacklist", res);
 		}
 		else {
 			next();
@@ -37,12 +35,11 @@ app.use(function(req,res, next){
 	});
 });
 
-
 //Middleware to decide propper pages/api to use
 app.use(function(req, res, next){
 	var host = req.hostname;
 	reqIP = req.ip;
-	clog("Inbound request on: " + host, color.magenta);
+	clog("Inbound request on: " + host+"\nRequest from: "+reqIP, color.magenta);
 	switch(host){
 		case "ethanryoung.com":
 			req.pageDir = "./pages/ethanryoung";
@@ -57,6 +54,7 @@ app.use(function(req, res, next){
 	next();
 });
 
+//Endpoint for API's
 app.post("/api/*", (req, res) => {
 	if(api == null)
 		clog("API unavailible", color.red);
@@ -66,14 +64,17 @@ app.post("/api/*", (req, res) => {
 	}
 });
 
+//Web page index
 app.get("/", (req, res) => {
 	sendPage(req.pageDir, "/index", res);
 });
 
+//used to direct all pages
 app.get("/*", (req, res) => {
 	sendPage(req.pageDir, req.path, res);
 });
 
+//sends web page as response
 function sendPage(pageDir, path, res){
 	clog("Got page request for: "+pageDir + path, color.yellow);
 	file.read(pageDir, path + ".html", function(page){
@@ -88,6 +89,7 @@ function sendPage(pageDir, path, res){
 	});
 }
 
+//sends 404 page as response
 function sendError(pageDir, path, res){
 	file.read(pageDir, "/404.html", function(page){
 		if(page == null) clog('File reader is broken!!', color.red);
