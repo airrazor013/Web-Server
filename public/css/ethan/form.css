@@ -1,0 +1,50 @@
+.formBody{
+  width: 95%;
+  max-width: 750px;
+  margin: 0 auto;
+  text-align: center;
+  height : auto;
+  background: #f7b733;
+}
+
+.formTitle{
+  font-size: 1.5rem; 
+  text-align:center;
+  padding-top: 10px;
+}
+
+form {
+  width: 100%;
+  margin: auto;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+button {
+  background-color: white;;
+  color: black;
+  font-size: 1.2rem;
+  width: auto;
+  height: auto;
+}
+
+input[type=text] {
+  font-size: 1.2rem;
+  border-bottom-color: #fc4a1a;
+}
+
+input[type=email] {
+  font-size: 1.2rem;
+  border-bottom-color: #fc4a1a;
+}
+
+textarea{
+  font-size: 1.2rem;
+  border-color: #fc4a1a;
+  width : 650px;
+  height : 200px;
+  max-width: 90%;
+}
+span{
+    color: #fc4a1a;
+}

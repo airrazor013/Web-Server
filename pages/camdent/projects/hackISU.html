@@ -1,0 +1,61 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Projects - Hack ISU</title>
+    <link rel="stylesheet" type="text/css" href="/css/camdent/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/camdent/project.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="sidenav">
+    <a href="/index">Camden Thomas</a>
+    <div class="empty25"></div>
+    <a href="/about">About Me</a>
+    <button id="dropDownButton"class="dropdown-btn">Projects
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div id = "dropDownDiv" class="dropdown-container">
+      <a href="/projects/all">All</a>
+      <a href="/projects/webServer">Web Server</a>
+      <a id="activePage" href="/projects/hackISU">Hack ISU 2018</a>
+      <!--
+      <a href="/projects/drinkersChoice">Drinkers Choice</a>
+      <a href="/projects/gameMania">Game Mania</a>
+      -->
+    </div>
+    <a href="/contact">Contact Me</a>
+  </div>
+  <div class="main">
+    <div id="header">
+      <img src="/images/camdent/SECRET.jpg" alt="A photo of our Hack ISU 2018 project - SECRET" class="imageHeader" style="height:300px;"/>
+    </div>
+    <div class="project">
+      <div class="title">
+        <div style="margin:6px;">
+          <h1>Hack ISU 2018 - SECRET</h1><br /> Steganography/Encryption for Circumventing REalized Tyranny - Encrypt and embed messages accross multiple devices.
+        </div>
+      </div>
+      <div class="description">
+        <div style="padding:3px;">
+          <p>
+            Our project won the 1st place prize for hardware, as well as the 1st place prize for most ethical hack.<br /><br />
+
+            During this event, I was tasked with setting up the hardware required for the project, as well as coding the microcontroler. <br />
+            The microcontroler took atmospheric noise as an input.
+            There were 8 data lines connected from the microcontroler to the Raspbery Pi.<br />
+            These lines could be polled at any time to construct a byte that would be used as part of the encryption.<br />
+            Once the device had been polled enough times, it would create a keys from the bytes received. These keys were then used to preform RSA encryption on the Raspbery Pi.<br />
+
+            <br /><br />
+            You can find the source code for our project on Github <a class="external" href="https://github.com/youngethan4/HackISUProject">here</a>.<br>
+            Read more about this project on Devpost <a class="external" href="https://devpost.com/software/secret-prv9bq">here</a>.
+          </p>
+        </div>
+      </div>
+      <div class="footer">
+      </div>
+    </div>
+  </div>
+  <script src='/scripts/camdent/sideNavDropdown.js'></script>
+</body>
+</html>

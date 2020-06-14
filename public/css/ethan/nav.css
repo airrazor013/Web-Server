@@ -1,0 +1,94 @@
+.nav{
+    width: 100%;
+    position: fixed;
+    height: 50px;
+    overflow: visible;
+    background:linear-gradient(90deg, #fc4a1a 0%,#f7b733 100% );
+}
+
+.wrapper{
+    margin: 0 auto;
+    max-width: 900px;
+    min-width: 250px;
+}
+
+.title{
+    float: left;
+    padding: 7px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.items{
+    display: block;
+    float: right;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.item{
+    display: inline-block;
+    padding: 12px;
+}
+
+.item a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+    border-bottom: 1px solid white;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.active a{
+    border-bottom: 0px;
+}
+
+.hamburger{
+    height: 40px;
+    width: 50px;
+    padding: 5px;
+    display: none;
+    float: right;
+    filter: invert(1);
+}
+
+/* Use a media query to add a breakpoint at 700px: */
+@media screen and (max-width: 700px) {
+    .wrapper{
+        display: grid;
+        grid-template-columns: 70% auto;
+        grid-gap: 0px;
+    }
+
+    .hamburger{
+        display: block;
+        justify-self: end;
+    }
+
+    .items{
+        margin-top: -2px;
+        display: none;
+        grid-column: 1 / -1;
+        grid-row-start: 2;
+        justify-self: end;
+        width: 60%;
+        color: rgba(0, 0, 0, 0.5);
+        background:linear-gradient(90deg, #f87528 0%,#f7b733 100% );
+    }
+
+    .item{
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 1.25rem;
+    }
+
+    .active{
+        color: rgba(0, 0, 0, 1);
+    }
+}

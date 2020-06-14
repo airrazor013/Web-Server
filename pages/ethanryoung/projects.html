@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ethan Young</title>
+  <link rel="stylesheet" type="text/css" href="/css/ethan/essays.css">
+  <link rel="stylesheet" type="text/css" href="/css/ethan/eStyle.css">
+  <link rel="stylesheet" type="text/css" href="/css/ethan/projects.css">
+  <link rel="stylesheet" type="text/css" href="/css/ethan/nav.css">
+  <script src="/scripts/ethanryoung/nav.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="/scripts/ethanryoung/project.js"></script>
+</head>
+<body>
+
+  <div class="nav">
+    <div class="wrapper">
+      <a class="title">Ethan Young</a>
+      <img id= "hamburger" class="hamburger" src="images/ethan/hamburger.png" onclick="toggleMobileNav()">
+      <ul class="items" id="items">
+          <li class="item"><a href="index">About Me</a></li>
+          <li class="item active"><a href="projects">Projects</a></li>
+          <li class="item"><a href="resume">Resume</a></li>
+          <li class="item"><a href="contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class = "content" >
+    <div class="traveler" id="traveler">
+      <p><a onclick="toSeniorDesign()">Senior Design Project</a></p>
+      <p><a onclick="toNoteCollab()">Note Collab</a></p>
+      <p><a onclick="toMemory()">Memory</a></p>
+      <p><a onclick="toDrinkersChoice()">Drinker's Choice</a></p>
+      <p><a onclick="toHackISU()">HackISU Project</a></p>
+      <p><a onclick="toWebsite()">Website </a></p>
+    </div>
+    <div class="project" id="seniorDesign">
+      <br/><h1 class="projectHeading"><strong>Senior Design Project</strong></h1><br/>
+      <p class="textProject" >
+        My Senior Design Project entailed gathering road roughness samples and calculating the International Roughness Index (IRI) for the particular sample 
+        in a team of three other individuals. This project was given to us by the Iowa Department of Transportation (IowaDOT) and intended to place a black box into each fleet vehicle.
+      </p>
+      <p class="textProject">
+        To collect the data from the roads while driving, we used an Arduino Uno, which has very limited capabilities, and therefore is the reason we were unable to directly send 
+        data from the Arduino. We got over this hurdle by creating a file upload on a website hosted by an Azure server. I had many roles in the project including front-end React 
+        developing, back-end Node developing, MySQL database setup, and project manager. 
+      </p>
+
+      <div class="picDesciption">
+        <img src="images/ethan/Senior.jpg"/>
+        <p>Prototype of the Arduino Uno that will be in the vehicles.</p>
+      </div>
+      
+
+      <p class="backToTop"onclick="scrollToTop()">Back to top</p>
+    </div>
+    
+    <div class = "project" id="noteCollab">
+      <br/><h1 class="projectHeading"><strong>Note Collab</strong></h1>
+      <p class="textProject">
+        Note Collab is a project that started out as a school project and was evolved to a far greater point afterward. The app is geared towards idea generation sessions 
+        for designers and engineers as well as throughout the Agile process. In a nutshell, the teams can create sticky notes and collaborate with one another as they would 
+        with a whiteboard. Users can create any number of notes,  move them, change their color, and make use of the rich text editor included in each one. For the project, 
+        I am using React for the front-end, Node for the back-end, Socket.io for the socket rooms, and Draft.js for the rich text editor. 
+      </p>
+
+      <div class="picDesciption">
+        <img src="images/ethan/note_one.png"/>
+        <p>View of a singular note when hovered over.</p>
+      </div>
+      <div class="picDesciption">
+        <img src="images/ethan/note_three.png"/>
+        <p>View of the navigation bar as well as example notes.</p>
+      </div>
+
+      <p class="textProject">
+        During the app’s development, I was initially supposed to only be the back-end developer for this project, but my only partner was unable to get the front-end working in time. 
+        He was having quite a lot of issues with React as it turned out and I was attempting to help him along the way though it was difficult being I have not used it either. Finally, 
+        toward the end of the project, I realized that my partner was not attempting the React front-end what-so-ever. Everything that was done was the helpful contributions that I tried 
+        to explain to him. During the final week of the project, I pulled through and finished the front-end to the best of my ability and we still got an A on the project.
+      </p>
+      <p class="backToTop"onclick="scrollToTop()">Back to top</p>
+    </div>
+    
+    <div class = "project" id="memory">
+      <br/><h1 class="projectHeading"><strong>Memory</strong></h1>
+      <p class="textProject"> 
+        Memory started out as a way for me to learn more about application development. This was my first experience with full-stack development and creating a database, which required a lot of 
+        research and time spent. For the back-end of the application, I was able to use my own personal server that I already owned for multiple years. The application was for Android smartphones, 
+        so I used Android Studios which I already had prior knowledge with. The back-end was made with Node, MySQL, and Socet.io. The main features of the game are 20 or 30 card modes, timer or play 
+        count modes, high score tracking, and sudo-random games.  
+      </p>
+
+      <p class="textProject">
+        During development, I really messed around with as many options as I could. This included local storage, Android Volley, threading, fragments, etc. While I really wanted to continue 
+        to make multiplayer support for the application, I lost interest after a while and did not want to continue down the gaming path. I figured this out when I started the Note Collab 
+        project and saw the wonders of developing applications with React. I plan to teach myself React Native in the future for any of my mobile development needs. 
+      </p>
+
+      <div class="picDesciption">
+        <img src="images/ethan/memory_login.png"/>
+        <p>View of the login fragment.</p>
+      </div>
+
+      <div class="picDesciption">
+        <img src="images/ethan/memory_home.png"/>
+        <p>View of the Memory homepage.</p>
+      </div>
+
+      <div class="picDesciption">
+        <img src="images/ethan/memory_game.png"/>
+        <p>View of the 20-card, timed mode of Memory.</p>
+      </div>
+      
+      <p class="backToTop"onclick="scrollToTop()">Back to top</p>
+    </div>
+    
+    <div class = "project" id="drinkersChoice">
+      <br/><h1 class="projectHeading"><strong>Drinker's Choice</strong></h1><br/>
+      <p class="textProject">
+        Drinker's Choice was another app I did as a class project that really got me into software development. Drinker's Choice was an app made for people to post drinks, get rides, 
+        and see business promotions. Throughout the project, I worked on front-end development making the login and create user activities that would sign in 3 different types of users; 
+        drinkers (regular users), drivers, and businesses. I also helped with the endpoint and server communication classes and created the WebSocket seen in the first picture below. 
+        This WebSocket was used to send messages from drinkers to drivers to coordinate the ride. The Google Maps API was used to send the drivers the drinker's location as well.
+      </p>
+
+      <p class="textProject">
+        I also created the comments activity for this project seen in the second photo. It had functionality for users to upvote, downvote, and leave comments on the posts. With this 
+        ranking system and comments, other users would benefit by seeing the best drinks and avoiding ones that the majority does not like. There were still some bugs at the end of the 
+        semester that would have been squashed given enough time.
+      </p>
+
+      <div class="picDesciption">
+        <img src="images/ethan/dc_websocket.png"/>
+        <p>View of the websock feature for drinkers to chat with drivers.</p>
+      </div>
+      <div class="picDesciption">
+        <img src="images/ethan/dc_comments.png"/>
+        <p>View of the posts that drinkers can upload with their respective comments.</p>
+      </div>
+
+      <p class="textProject">
+        Drinker’s Choice was my first major software team project, and the first time I lead a software team project. I took on this role because I am great at time management 
+        and always like to get assignments done well before their due dates. This experience taught me a lot about working with a team and the different schedules they may have. 
+        I also got to get experience with an agile-like development environment using the Trello board.  
+      </p>
+
+      <p class="backToTop"onclick="scrollToTop()">Back to top</p>
+    </div>
+    
+    <div class = "project" id="hackISU">
+      <br/><h1 class="projectHeading"><strong>HackISU Fall 2019</strong></h1><br/>
+      <p class="textProject">
+        At HackISU last November, my team achieved first place in hardware hack and first place in ethical hack. I was tasked with implementing the gpio binary 
+        inputs from the Arduino and converting them into characters and creating two strings. One was used as a key for the encryption and the other was used for 
+        the initialization vector. I also helped with the other gpio ports that had to do with the buttons and lights.
+      </p>
+
+      <div class="picDesciption">
+        <img src="images/ethan/hackisu_secret.png"/>
+        <p>Picture of SECRET embedded system.</p>
+      </div>
+
+      <p class="textProject">
+        The main purpose of the project was to get a truly random string as a key from the environment using a microphone. Using this key, 
+        a file would be encrypted then the key and encrypted file would be hidden in pictures on different drives. The use was for information 
+        smuggling without getting caught.
+        If you would like to read more, go <a href="https://devpost.com/software/secret-prv9bq" class="link">here</a>.
+      </p>
+      <p class="backToTop"onclick="scrollToTop()">Back to top</p>
+    </div>
+    
+    <div class = "project" id="website">
+      <br/><h1 class="projectHeading"><strong>Web Server</strong></h1><br/>
+      <p class=textProject>
+        This website you are viewing now is hosted on my personal server just like my app Memory is. The backend is coded in node.js and is set up to host multiple domains. 
+        I have been working on this with my friend, <a href="https://camdent.net" class="link">Camden Thomas</a>. Each individual domain navigation is done in node js by 
+        first seeing which domain the request came from, then sending the correct HTML file to the user. I also created a function to send emails to an email account when 
+        someone contacts me through this site.
+      </p>
+      <p class="backToTop"onclick="scrollToTop()">Back to top</p>
+    </div><br /><br />
+  </div>
+
+  <div class="footer">
+    <div class="spacer">
+      <a class = "link" href="contact">Contact</a>
+      <div class="logos">
+        <a href="https://github.com/youngethan4"><img src="images/ethan/icon_github.png" class="github"/></a>
+        <a href="https://www.linkedin.com/in/youngethan4/"><img src="images/ethan/icon_linkedin.png" class="linkedin" /></a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

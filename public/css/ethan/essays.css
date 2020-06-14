@@ -1,0 +1,22 @@
+.essays{
+  background-color: #ff8700;
+  visibility: hidden;
+}
+
+.essays a{
+  margin: auto 0;
+  background-color: #ff8700;
+  color: white;
+}
+
+.essays a:hover{
+  background-color: #292929;
+}
+
+.essaysDropdown:hover .essays{
+  visibility: visible;
+}
+
+.essaysDropdown:focus .essays{
+  visibility: visible;
+}

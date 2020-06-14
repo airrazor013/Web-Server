@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ethan Young</title>
+  <link rel="stylesheet" type="text/css" href="/css/ethan/essays.css">
+  <link rel="stylesheet" type="text/css" href="/css/ethan/eStyle.css">
+  <link rel="stylesheet" type="text/css" href="/css/ethan/projects.css">
+</head>
+<body>
+
+  <div class = "header" style="background-image: url('images/ethan/header_background.png');">
+    <p class = "ethanYoung"><strong>Ethan Young</strong></p>
+  </div>
+
+<ul class="ul">
+  <li class="li"><a href="index">- About -</a></li>
+  <li class="li"><a href="resume">- Resume -</a></li>
+  <li class="li"><a class="active">- Senior Design Project -</a></li>
+  <li class="li"><a href="projects">- Projects -</a></li>
+  <li class="li essaysDropdown"><a>- Essays and Reflections -</a>
+    <div class="essays">
+        <a href="ethicsEssay">- Ethics Essay -</a>
+        <a href="genEdReflection">- Gen Ed Reflection -</a>
+        <a href="cumReflection">- Cumulative Reflection -</a>
+    </div>
+  </li>
+</ul>
+
+<div class="images">
+    <img src="images/ethan/icon_github.png" class="github" />
+    <img src="images/ethan/icon_linkedin.png" class="linkedin" />
+</div>
+
+<div class = "content">
+  <div class="project">
+      <br/><h1 class="heading"><strong>Senior Design Project</strong></h1><br/>
+      <p class="textProject">
+          My senior design project includes three others: Mike, Victor, and Shlok. The project entails gathering road roughness samples
+          and calculating the International Roughness Index (IRI) for the particular sample. This project was given to us by the Iowa Department
+          of Transportation (IowaDOT). The main goals for the project are to gather the data and send it
+          to a cloud server, figure out the sample size as the data comes in, calculate the rougness for the sample, and save that data to
+          a database. To collect the data from the roads while driving, we are using a Arduino Uno, which has very limited capabilities, and therefore
+          is the reason we will be figuring out the sampling size and the IRI calculation on the Microsoft Azure cloud server. There is also a stretched
+          goal of creating a user interface to interact with the data that is being collected. This would be done through using the OpenLayers API and React JS.
+      </p>
+      <p class="textProject">
+          The main role I have for this project is project manager. I make sure that the git is up to date and that everyone is commiting what they have done.
+          I also initiate meeting setups which include primarily of asking for peoples schedules and configuring a good meeting time where we all are available.
+          I also do a lot of work on the software side of things. This has included compressing libraries to fit them all on the Uno, setting up the Node JS server
+          and configuring it with the MySQL database, and converting the IRI calculation given to us in Fortran to JavaScript.
+      </p>
+
+      <img class="image" src="images/ethan/Senior.jpg"/>
+      <p>Prototype of the Arduino Uno that will be in the vehicles.</p>
+
+  </div>
+</div>

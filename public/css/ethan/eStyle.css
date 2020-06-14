@@ -1,0 +1,73 @@
+body {
+  background-color: white;
+  margin: 0;
+}
+
+.content {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.heading{
+  width: 95%;
+  max-width: 900px;
+  padding: 10px;
+  font-size: 1.5rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.text {
+  width: 95%;
+  max-width: 900px;
+  padding: 10px;
+  font-size: 1.2rem;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.ethanPNG{
+  margin-right: 15px;
+  float:left;
+  width:200px;
+  height:200px;
+  border: 2px solid #fc4a1a;
+}
+
+.link{
+  color: #fc4a1a;
+  text-decoration: underline;
+}
+
+.footer{
+  text-align: center;
+}
+
+.spacer{
+  width: 95%;
+  border-top: 2px solid #f7b733;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.logos {
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.github {
+	height : 35px;
+	border: 2px solid white;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.linkedin {
+	height : 37px;
+  border: 2px solid white;
+  border-radius: 5px;
+  background: white;
+  cursor: pointer;
+}
