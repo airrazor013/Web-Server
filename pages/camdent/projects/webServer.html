@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
@@ -60,3 +61,67 @@
   <script src='/scripts/camdent/sideNavDropdown.js'></script>
 </body>
 </html>
+=======
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Projects - Web Server</title>
+    <link rel="stylesheet" type="text/css" href="/css/camdent/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/camdent/project.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+</head>
+<body>
+  <div class="sidenav">
+    <a href="/index">Camden Thomas</a>
+    <div class="empty25"></div>
+    <a href="/about">About Me</a>
+    <button id="dropDownButton"class="dropdown-btn">Projects
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div id = "dropDownDiv" class="dropdown-container">
+      <a href="/projects/all">All</a>
+      <a id="activePage" href="/projects/webServer">Web Server</a>
+      <a href="/projects/hackISU">Hack ISU 2018</a>
+      <!--
+      <a href="/projects/drinkersChoice">Drinkers Choice</a>
+      <a href="/projects/gameMania">Game Mania</a>
+      -->
+    </div>
+    <a href="/contact">Contact Me</a>
+  </div>
+  <div class="main">
+    <div id="header">
+      <img src="/images/camdent/nodeAndExpress.png" class="imageHeader"/>
+    </div>
+    <div class="project">
+      <div class="title">
+        <div style="margin:6px;">
+          <h1>Web Server</h1>
+        </div>
+      </div>
+      <div class="description">
+        <div style="padding:3px;">
+          <p>
+            In order to host this website, I developed my own web server using Node.js and Express framework.<br><br>
+            The server was designed to be able to provide hosting to any number of different web domains.
+            To provide each unique website hosted on the server the proper pages, I took advantage of Express' application-level middleware.<br><br>
+            When an inbound request is received on the server, the domain that the request was sent from is analyzed to determine what directory the appropriate html files are located in.
+            Once the directory was chosen, the url path specifies what html file to display.
+            If the html file does not exist, then a 404 page is automatically displayed.<br><br>
+            I chose to set the server up like this because it offered an easy way to add new pages to the website.
+            Simply add a web page to the appropriate folder and the server will handle the rest.
+            Using this configuration, there is no need to create a unique endpoint for each web page.<br><br>
+            You can find the source code for the web server on Github <a class="external" href="https://github.com/airrazor013/website">here</a>.
+          </p>
+        </div>
+      </div>
+      <div class="footer">
+        <a class="external" href="https://nodejs.org/en/">Link</a> to the Node.js website.<br>
+        <a class="external" href="https://expressjs.com/">Link</a> to the Express website.
+      </div>
+    </div>
+  </div>
+  <script src='/scripts/camdent/sideNavDropdown.js'></script>
+</body>
+</html>
+>>>>>>> 321c8e7d32b2bf50ba28f5be80493b6f38560eaa
