@@ -41,33 +41,33 @@ body {
 }
 
 .footer{
-  text-align: center;
-}
-
-.spacer{
   width: 95%;
   border-top: 2px solid #f7b733;
   max-width: 900px;
-  margin: 0 auto;
-}
-
-.logos {
-  display: inline-block;
-  margin-top: 10px;
-  margin-left: 20px;
+  margin: auto;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  display: flex;
 }
 
 .github {
-	height : 35px;
+  height : 35px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 	border: 2px solid white;
   border-radius: 50px;
   cursor: pointer;
+  margin-left: 20px;
 }
 
 .linkedin {
-	height : 37px;
+  height : 37px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   border: 2px solid white;
   border-radius: 5px;
   background: white;
   cursor: pointer;
+  margin-left: 10px;
 }

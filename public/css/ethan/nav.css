@@ -42,8 +42,16 @@
     padding-right: 5px;
 }
 
+.item:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
 .active a{
     border-bottom: 0px;
+}
+
+.active:hover{
+    background-color: initial;
 }
 
 .hamburger{
