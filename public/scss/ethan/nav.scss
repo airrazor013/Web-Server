@@ -1,0 +1,138 @@
+@import 'mediaBreaks.scss';
+@import 'colors.scss';
+
+.nav{
+    width: 100%;
+    margin: 0;
+    position: fixed;
+    overflow: visible;
+    background:linear-gradient(90deg, $color-dark 0%,$color-light 100% );
+
+    @media screen and (max-width: $break-mobile){
+        background: none;
+    }
+}
+
+.wrapper{
+    margin: 0 auto;
+    max-width: $width-desktop;
+
+    @media screen and (max-width: $break-mobile){
+        display: grid;
+        grid-template-columns: auto;
+        grid-gap: 0px;
+        max-width: 100%;
+    }
+
+    @media screen and (min-width: $break-ultra){
+        margin: 0 auto;
+        max-width: $width-ultra;;
+    }
+}
+
+.mobile-wrapper{
+    background:linear-gradient(90deg, $color-dark 0%,$color-light 100% );
+    width: 100%;
+    overflow: visible;
+}
+
+.title{
+    float: left;
+    margin: 0;
+    padding: 7px;
+    font-size: $title-text-desktop;
+    font-weight: bold;
+    color: white;
+
+    @media screen and (max-width: $break-mobile){
+        font-size: $title-text-mobile;
+    }
+
+    @media screen and (min-width: $break-ultra){
+        font-size: $title-text-ultra;
+    }
+}
+
+.items{
+    display: block;
+    float: right;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    @media screen and (max-width: $break-mobile){
+        margin-top: -2px;
+        display: none;
+        justify-self: end;
+        width: 60%;
+        color: rgba(0, 0, 0, 0.5);
+        background:linear-gradient(90deg, #f87528 0%,$color-light 100% );
+    }
+}
+
+.item{
+    display: inline-block;
+    padding: 11px;
+
+    &:hover{
+        background-color: rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+    }
+
+    a{
+        font-size: $nav-text-desktop;
+        text-decoration: none;
+        color: white;
+        border-bottom: 1px solid white;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin: 0;
+    }
+
+    @media screen and (max-width: $break-mobile){
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: $nav-text-mobile;
+        display: block;
+        text-align: center;
+
+        a{
+            text-align: center;
+        }
+    }
+
+    @media screen and (min-width: $break-ultra){
+
+        a{
+            font-size: $nav-text-ultra;
+        } 
+    }
+}
+
+.active{
+    a{
+        border-bottom: 0px;
+    
+        &:hover{
+            cursor: default;
+        }
+    }
+
+    &:hover{
+        background-color: initial;
+        cursor: default;
+    }
+}
+
+.hamburger{
+    height: 40px;
+    width: 50px;
+    padding: 5px;
+    display: none;
+    float: right;
+    filter: invert(1);
+
+    @media screen and (max-width: $break-mobile){
+        display: block;
+    }
+}

@@ -1,0 +1,99 @@
+@import 'mediaBreaks.scss';
+@import 'colors.scss';
+
+body {
+  background-color: rgb(248, 249, 251);
+  margin: 0;
+}
+
+.content {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.heading{
+  width: 95%;
+  max-width: 900px;
+  padding: 10px;
+  font-size: $heading-text;
+  margin: 0 auto;
+  text-align: center;
+
+  @media screen and (min-width: $break-ultra){
+    font-size: $heading-text-ultra;
+    max-width: $width-ultra;
+  }
+}
+
+.aboutMe{
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 90%;
+  max-width: $width-desktop;
+  text-align: center;
+  margin: 40px auto;
+  padding: 10px;
+
+  @media screen and (min-width: $break-ultra){
+    max-width: $width-ultra;
+    
+  }
+}
+
+.text {
+  padding: 10px;
+  margin: 0;
+  font-size: $body-text-desktop;
+  text-align: left;
+
+  @media screen and (max-width: $break-mobile){
+    font-size: $body-text-mobile;
+  }
+
+  @media screen and (min-width: $break-ultra){
+    font-size: $body-text-ultra;
+  }
+}
+
+.link{
+  color: $color-dark;
+  text-decoration: underline;
+}
+
+.footer{
+  width: 95%;
+  border-top: 2px solid $color-light;
+  max-width: 900px;
+  margin: auto;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  display: flex;
+
+  @media screen and (min-width: $break-ultra){
+    max-width: $width-ultra;
+    
+  }
+}
+
+.github {
+  height : 35px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+	border: 2px solid white;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.linkedin {
+  height : 37px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 2px solid white;
+  border-radius: 5px;
+  background: white;
+  cursor: pointer;
+  margin-left: 10px;
+}

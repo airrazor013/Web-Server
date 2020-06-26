@@ -1,50 +1,83 @@
-.formBody{
+.formBody {
   width: 95%;
   max-width: 750px;
   margin: 0 auto;
   text-align: center;
-  height : auto;
+  height: auto;
   background: #f7b733;
-}
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+  @media screen and (min-width: 2200px) {
+    .formBody {
+      max-width: 1300px; } }
 
-.formTitle{
-  font-size: 1.5rem; 
-  text-align:center;
-  padding-top: 10px;
-}
+.formTitle {
+  font-size: 1.5rem;
+  text-align: center;
+  padding-top: 10px; }
+  @media screen and (min-width: 2200px) {
+    .formTitle {
+      font-size: 2rem; } }
 
 form {
   width: 100%;
-  margin: auto;
+  margin: 0 auto;
   font-size: 1.2rem;
-  text-align: center;
-}
+  text-align: center; }
+  @media screen and (max-width: 700px) {
+    form {
+      font-size: 1rem; } }
+  @media screen and (min-width: 2200px) {
+    form {
+      font-size: 1.5rem; } }
 
 button {
-  background-color: white;;
-  color: black;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: none;
+  color: #fc4a1a;
   font-size: 1.2rem;
   width: auto;
-  height: auto;
-}
+  height: auto; }
+  @media screen and (max-width: 700px) {
+    button {
+      font-size: 1rem; } }
+  @media screen and (min-width: 2200px) {
+    button {
+      font-size: 1.5rem; } }
+
+button:hover {
+  cursor: pointer; }
 
 input[type=text] {
-  font-size: 1.2rem;
-  border-bottom-color: #fc4a1a;
-}
+  font-size: 1.2rem; }
+  @media screen and (max-width: 700px) {
+    input[type=text] {
+      font-size: 1rem; } }
+  @media screen and (min-width: 2200px) {
+    input[type=text] {
+      font-size: 1.5rem; } }
 
 input[type=email] {
-  font-size: 1.2rem;
-  border-bottom-color: #fc4a1a;
-}
+  font-size: 1.2rem; }
+  @media screen and (max-width: 700px) {
+    input[type=email] {
+      font-size: 1rem; } }
+  @media screen and (min-width: 2200px) {
+    input[type=email] {
+      font-size: 1.5rem; } }
 
-textarea{
+textarea {
   font-size: 1.2rem;
-  border-color: #fc4a1a;
-  width : 650px;
-  height : 200px;
-  max-width: 90%;
-}
-span{
-    color: #fc4a1a;
-}
+  max-width: 650px;
+  height: 200px;
+  width: 90%; }
+  @media screen and (max-width: 700px) {
+    textarea {
+      font-size: 1rem; } }
+  @media screen and (min-width: 2200px) {
+    textarea {
+      font-size: 1.5rem;
+      max-width: 1200px; } }
+
+span {
+  color: #fc4a1a; }

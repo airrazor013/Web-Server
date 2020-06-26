@@ -1,0 +1,107 @@
+@import 'mediaBreaks.scss';
+@import 'colors.scss';
+
+.formBody{
+  width: 95%;
+  max-width: 750px;
+  margin: 0 auto;
+  text-align: center;
+  height : auto;
+  background: $color-light;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  @media screen and (min-width: $break-ultra){
+    max-width: 1300px;
+  }
+}
+
+.formTitle{
+  font-size: $heading-text; 
+  text-align:center;
+  padding-top: 10px;
+
+  @media screen and (min-width: $break-ultra){
+    font-size: $heading-text-ultra;
+  }
+}
+
+form {
+  width: 100%;
+  margin: 0 auto;
+  font-size: $body-text-desktop;
+  text-align: center;
+
+  @media screen and (max-width: $break-mobile){
+    font-size: $body-text-mobile;
+  }
+
+  @media screen and (min-width: $break-ultra){
+    font-size: $body-text-ultra;
+  }
+}
+
+button {
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: none;
+  color: $color-dark;
+  font-size: $body-text-desktop;
+  width: auto;
+  height: auto;
+
+  @media screen and (max-width: $break-mobile){
+    font-size: $body-text-mobile;
+  }
+
+  @media screen and (min-width: $break-ultra){
+    font-size: $body-text-ultra;
+  }
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+input[type=text] {
+  font-size: $body-text-desktop;
+
+  @media screen and (max-width: $break-mobile){
+    font-size: $body-text-mobile;
+  }
+
+  @media screen and (min-width: $break-ultra){
+    font-size: $body-text-ultra;
+  }
+}
+
+input[type=email] {
+  font-size: $body-text-desktop;
+
+  @media screen and (max-width: $break-mobile){
+    font-size: $body-text-mobile;
+  }
+
+  @media screen and (min-width: $break-ultra){
+    font-size: $body-text-ultra;
+  }
+}
+
+textarea{
+  font-size: $body-text-desktop;
+  max-width : 650px;
+  height : 200px;
+  width: 90%;
+
+  @media screen and (max-width: $break-mobile){
+    font-size: $body-text-mobile;
+  }
+
+  @media screen and (min-width: $break-ultra){
+    font-size: $body-text-ultra;
+    max-width: 1200px;
+  }
+}
+
+span{
+    color: $color-dark;
+}

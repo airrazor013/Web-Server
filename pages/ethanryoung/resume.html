@@ -16,24 +16,35 @@
 
   <div class="nav">
     <div class="wrapper">
-      <a class="title">Ethan Young</a>
-      <img id= "hamburger" class="hamburger" src="images/ethan/hamburger.png" onclick="toggleMobileNav()">
+      <div class="mobile-wrapper">
+        <a class="title">Ethan Young</a>
+        <img id= "hamburger" class="hamburger" src="images/ethan/hamburger.png" onclick="toggleMobileNav()">
+      </div>
       <ul class="items" id="items">
-          <li class="item"><a href="index">About Me</a></li>
-          <li class="item"><a href="projects">Projects</a></li>
-          <li class="item active"><a href="resume">Resume</a></li>
-          <li class="item"><a href="contact">Contact</a></li>
+        <li class="item" onclick="window.location.href = 'index'">
+          <a href="index">About Me</a>
+        </li>
+        <li class="item" onclick="window.location.href = 'projects'">
+          <a href="projects">Projects</a>
+        </li>
+        <li class="item active">
+          <a>Resume</a>
+        </li>
+        <li class="item" onclick="window.location.href = 'contact'">
+          <a href="contact">Contact</a>
+        </li>
       </ul>
     </div>
   </div>
 
-  <div class="resume">
-    <object data="documents/ResumeWeb.pdf" type="application/pdf" width="100%" height="1000px">
-      <p>Your web browser doesn't have a PDF plugin.
-        Click <a class="link" href="documents/ResumeWeb.pdf">here</a> 
+  <div class="content">
+    <div class="resume">
+      <img class="resumePicture" src="images/ethan/ethan_resume.png">
+      <p>
+        Click <a class="link" href="documents/Resume Ethan Young Website.pdf">here</a> 
         to download my resume instead.
       </p>
-    </object>
+    </div>
   </div>
 
   <div class="footer">

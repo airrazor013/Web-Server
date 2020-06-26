@@ -1,27 +1,60 @@
-scrollToTop = () => {
-    $('html, body').animate({scrollTop: $('#traveler').offset().top -100 }, 'fast');
+"use strict";
+
+function scrollToTop() {
+  let top = '#content';
+  traverseTo(top);
+};
+
+function seniorContentToggle() {
+  let seniorDesign = '#seniorDesign';
+  contentToggle(seniorDesign);
+  traverseTo(seniorDesign);
+};
+
+function noteCollabContentToggle () {
+  let noteCollab = '#noteCollab';
+  contentToggle(noteCollab);
+  traverseTo(noteCollab);
+};
+
+function memoryContentToggle () {
+  let memory = '#memory';
+  contentToggle(memory);
+  traverseTo(memory);
+};
+
+function drinkersChoiceContentToggle () {
+  let drinkersChoice = '#drinkersChoice';
+  contentToggle(drinkersChoice);
+  traverseTo(drinkersChoice);
+};
+
+function hackISUContentToggle() {
+  let hackISU = '#hackISU';
+  contentToggle(hackISU);
+  traverseTo(hackISU);
+};
+
+function websiteContentToggle() {
+  let website = '#website';
+  contentToggle(website);
+  traverseTo(website);
+};
+
+function traverseTo(destination) {
+  $('html, body').animate({
+    scrollTop: $(destination).offset().top - 100
+  }, 'fast');
 }
 
-toSeniorDesign = () => {
-    $('html, body').animate({scrollTop: $('#seniorDesign').offset().top -70 }, 'fast');
-}
-
-toNoteCollab = () => {
-    $('html, body').animate({scrollTop: $('#noteCollab').offset().top -70 }, 'fast');
-}
-
-toMemory = () => {
-    $('html, body').animate({scrollTop: $('#memory').offset().top -70 }, 'fast');
-}
-
-toDrinkersChoice = () => {
-    $('html, body').animate({scrollTop: $('#drinkersChoice').offset().top -70 }, 'fast');
-}
-
-toHackISU = () => {
-    $('html, body').animate({scrollTop: $('#hackISU').offset().top -70 }, 'fast');
-}
-
-toWebsite = () => {
-    $('html, body').animate({scrollTop: $('#website').offset().top -70 }, 'fast');
-}
+function contentToggle(el) {
+  let content = el + 'Content';
+  let button = el + "ShowMore";
+  $(content).toggle();
+  var showMoreText = $(button).text();
+  if (showMoreText === "Show more") {
+    $(button).text("Show less");
+  } else {
+    $(button).text("Show more");
+  }
+};

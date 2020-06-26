@@ -1,0 +1,19 @@
+@import 'mediaBreaks.scss';
+
+.resume{
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 90%;
+  max-width: $width-desktop;
+  text-align: center;
+  margin: 40px auto;
+  padding: 10px;
+
+  @media screen and (min-width: $break-ultra){
+    max-width: $width-ultra;
+  }
+}
+
+.resumePicture{
+  width: 95%;
+}

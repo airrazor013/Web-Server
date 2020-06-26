@@ -15,13 +15,23 @@
 
   <div class="nav">
     <div class="wrapper">
-      <a class="title">Ethan Young</a>
-      <img id= "hamburger" class="hamburger" src="images/ethan/hamburger.png" onclick="toggleMobileNav()">
+      <div class="mobile-wrapper">
+        <a class="title">Ethan Young</a>
+        <img id= "hamburger" class="hamburger" src="images/ethan/hamburger.png" onclick="toggleMobileNav()">
+      </div>
       <ul class="items" id="items">
-          <li class="item"><a href="index">About Me</a></li>
-          <li class="item"><a href="projects">Projects</a></li>
-          <li class="item"><a href="resume">Resume</a></li>
-          <li class="item active"><a href="contact">Contact</a></li>
+        <li class="item" onclick="window.location.href = 'index'">
+          <a href="index">About Me</a>
+        </li>
+        <li class="item" onclick="window.location.href = 'projects'">
+          <a href="projects">Projects</a>
+        </li>
+        <li class="item" onclick="window.location.href = 'resume'">
+          <a href="resume">Resume</a>
+        </li>
+        <li class="item active">
+          <a>Contact</a>
+        </li>
       </ul>
     </div>
   </div>

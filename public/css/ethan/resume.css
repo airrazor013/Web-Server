@@ -1,8 +1,14 @@
-.resume{
-  width: 93%;
+.resume {
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 90%;
   max-width: 900px;
-  padding-top: 80px;
-  margin: 0 auto;
-  font-size: 1rem;
-  padding-bottom: 20px;
-}
+  text-align: center;
+  margin: 40px auto;
+  padding: 10px; }
+  @media screen and (min-width: 2200px) {
+    .resume {
+      max-width: 1500px; } }
+
+.resumePicture {
+  width: 95%; }
