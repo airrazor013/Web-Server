@@ -7,6 +7,7 @@
     position: fixed;
     overflow: visible;
     background:linear-gradient(90deg, $color-dark 0%,$color-light 100% );
+    z-index: 999;
 
     @media screen and (max-width: $break-mobile){
         background: none;

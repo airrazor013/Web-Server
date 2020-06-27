@@ -4,12 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ethan Young</title>
-  <link rel="stylesheet" type="text/css" href="/css/ethan/essays.css">
   <link rel="stylesheet" type="text/css" href="/css/ethan/eStyle.css">
   <link rel="stylesheet" type="text/css" href="/css/ethan/projects.css">
   <link rel="stylesheet" type="text/css" href="/css/ethan/nav.css">
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="/scripts/ethanryoung/nav.js"></script>
   <script src="/scripts/ethanryoung/project.js"></script>
 </head>
@@ -39,286 +40,285 @@
   </div>
 
   <div class = "content" id="content">
+    <div class="project-wrapper">
 
-    <!--<div class="traveler" id="traveler">
-      <p onclick="toSeniorDesign()">Senior Design Project</p>
-      <p onclick="toNoteCollab()">Note Collab</p>
-      <p onclick="toMemory()">Memory</p>
-      <p onclick="toDrinkersChoice()">Drinker's Choice</p>
-      <p onclick="toHackISU()">HackISU Project</p>
-      <p onclick="toWebsite()">Website</p>
-    </div>-->
+      <div class="project" id="seniorDesign">
+        <div class="projectIntro">
+          <h1><strong>Senior Design Project</strong></h1>
+          <p>A smart-sensing road roughness collector.</p>
+          <button id="seniorDesignShowMore" onclick="seniorContentToggle()">Show more</button>
+        </div>
 
-    <div class="project" id="seniorDesign">
-      <div class="projectIntro">
-        <h1><strong>Senior Design Project</strong></h1>
-        <p>A smart-sensing road roughness collector.</p>
-        <button id="seniorDesignShowMore" onclick="seniorContentToggle()">Show more</button>
-      </div>
-
-      <div class="projectContent" id="seniorDesignContent">
-        <div class="textContainer">
-          <h3 class="textHeading">Overview</h3>
-          <p class="textProject">
-            Throughout my Senior Design project, I was collaborating among a team of three other talented individuals as we set foot creating a black box for Iowa’s Department of Transportation vehicles. The goal entailed engineering smart-sensing hardware and software to collect road roughness data using the International Roughness Index (IRI) standard. We achieved this goal by using an Arduino Uno along with a GPS module, an accelerometer module, and an SD card module. I personally contributed to the front-end website, back-end, and database creation as well as assisting debugging on the Arduino when we had complex issues.
-          </p>
-        </div>
-        <div class="textContainer">
-          <h3 class="textHeading">Features</h3>
-          <p class="textProject">
-            IRI calculations based on the Golden Car Model.<br>
-            The Arduino itself had on-board speed and g-force filtering to extend SD card space with compliance of the IRI standard.<br>
-            Once data has been collected on the SD card after driving around, the user can eject the SD card and upload the data via a laptop or computer through a website that uploads the data to the Cloud.<br>
-            We did realize that having multi-threading support would have significantly improved our prototype by providing the capability to directly upload data from the black box to the Cloud in good coverage zones as well as increasing the polling speed of the accelerometer.
-          </p>
-        </div>
-        <div class="tools">
-          <p>C</p>
-          <p>React</p>
-          <p>Node</p>
-          <p>Express</p>
-          <p>Azure</p>
-          <p>MySQL</p>
-        </div>
-        <div class="pictureContainer">
-          <div class="pictureDesciption">
-            <img src="images/ethan/Senior.jpg"/>
-            <p>Prototype of the Arduino Uno that will be in the vehicles.</p>
+        <div class="projectContent" id="seniorDesignContent">
+          <div class="textContainer">
+            <h3 class="textHeading">Overview</h3>
+            <p class="textProject">
+              Throughout my Senior Design project, I was collaborating among a team of three other talented individuals as we set foot creating a black box for Iowa’s Department of Transportation vehicles. The goal entailed engineering smart-sensing hardware and software to collect road roughness data using the International Roughness Index (IRI) standard. We achieved this goal by using an Arduino Uno along with a GPS module, an accelerometer module, and an SD card module. I personally contributed to the front-end website, back-end, and database creation as well as assisting debugging on the Arduino when we had complex issues.
+            </p>
           </div>
-        </div>
-        <p class="backToTop"onclick="seniorContentToggle()">Show less</p>
-      </div>
-    </div>
-
-
-
-
-    <div class="project" id="noteCollab">
-      <div class="projectIntro">
-        <h1><strong>Note Collab</strong></h1>
-        <p>A real-time sticky note web application.</p>
-        <button id="noteCollabShowMore" onclick="noteCollabContentToggle()">Show more</button>
-        <button  onclick="window.open('https://github.com/youngethan4/Note-Collab', '_blank')">View code</button>
-      </div>
-
-      <div class="projectContent" id="noteCollabContent">
-        <div class="textContainer">
-          <h3 class="textHeading">Overview</h3>
-          <p class="textProject">
-            Note Collab is a project that started out as a school project and was evolved to a far greater point afterward for fun. The app is geared towards idea generation sessions for designers and engineers as well as throughout the Agile process. In a nutshell, the teams can create sticky notes and collaborate with one another as they would on a whiteboard. During the initial development in class, I had a partner that was working on the front-end while I worked on the back-end. However, towards the end, after many tries of trying to get him to learn and understand React, I had to take over as a full-stack developer to finish the project on time. 
-          </p>
-        </div>
-        <div class="textContainer">
-          <h3 class="textHeading">Features</h3>
-          <p class="textProject">
-            Any number of socket namespaces or rooms can be created for multiple groups working on the site at once.<br>
-            Users can see who is online in their room as well as chat with the team in case they are not in a call or together in person.<br>
-            Room codes can be directly copied with the click of a button for easy sharing.<br>
-            Users can create, move, resize, and change the color of each singular note.<br>
-            Each note includes rich text editing through the Implementation of Facebook’s Draft framework.
-          </p>
-        </div>
-        <div class="tools">
-          <p>HTML</p>
-          <p>CSS</p>
-          <p>React</p>
-          <p>Draft</p>
-          <p>Node</p>
-          <p>Socket.io</p>
-        </div>
-        <div class="pictureContainer">
-          <div class="pictureDesciption">
-            <img src="images/ethan/note_one.png"/>
-            <p>View of a singular note when hovered over.</p>
+          <div class="textContainer">
+            <h3 class="textHeading">Features</h3>
+            <p class="textProject">
+              IRI calculations based on the Golden Car Model.<br>
+              The Arduino itself had on-board speed and g-force filtering to extend SD card space with compliance of the IRI standard.<br>
+              Once data has been collected on the SD card after driving around, the user can eject the SD card and upload the data via a laptop or computer through a website that uploads the data to the Cloud.<br>
+              We did realize that having multi-threading support would have significantly improved our prototype by providing the capability to directly upload data from the black box to the Cloud in good coverage zones as well as increasing the polling speed of the accelerometer.
+            </p>
           </div>
-          <div class="pictureDesciption">
-            <img src="images/ethan/note_three.png"/>
-            <p>View of the navigation bar as well as example notes.</p>
+          <div class="tools">
+            <p>C</p>
+            <p>React</p>
+            <p>Node</p>
+            <p>Express</p>
+            <p>Azure</p>
+            <p>MySQL</p>
           </div>
+          <div class="pictureContainer">
+            <div class="pictureDesciption">
+              <img src="images/ethan/Senior.jpg"/>
+              <p>Prototype of the Arduino Uno that will be in the vehicles.</p>
+            </div>
+          </div>
+          <p class="backToTop"onclick="seniorContentToggle()">Show less</p>
         </div>
-        <p class="backToTop"onclick="noteCollabContentToggle()">Show less</p>
-      </div>
-    </div>
-
-
-
-
-    <div class="project" id="memory">
-      <div class="projectIntro">
-        <h1><strong>Memory</strong></h1>
-        <p>An Android mini-game for your mind.</p>
-        <button id="memoryShowMore" onclick="memoryContentToggle()">Show more</button>
-        <button onclick="window.open('https://github.com/youngethan4/All-In-One', '_blank')">View code</button>
       </div>
 
-      <div class="projectContent" id="memoryContent">
-        <div class="textContainer">
-          <h3 class="textHeading">Overview</h3>
-          <p class="textProject">
-            This was my first experience with full-stack development, which required a lot of research and learning. For the back-end of the application, I was able to use my own personal server that I already owned for multiple years and utilize ssh. During development, I really messed around with as many options as I could as well as tried my hardest to focus on code reusability wherever I could. I was able to use the same game activity for all modes of the game which I was pleased by. While I really wanted to continue to make multiplayer support for the application, I lost interest after a while and did not want to continue down the gaming path.
-          </p>
+
+
+
+      <div class="project" id="noteCollab">
+        <div class="projectIntro">
+          <h1><strong>Note Collab</strong></h1>
+          <p>A real-time sticky note web application.</p>
+          <button id="noteCollabShowMore" onclick="noteCollabContentToggle()">Show more</button>
+          <button  onclick="window.open('https://github.com/youngethan4/Note-Collab', '_blank')">View code</button>
         </div>
-        <div class="textContainer">
-          <h3 class="textHeading">Features</h3>
-          <p class="textProject">
-            The login and create account fragment allow users to swipe between them effortlessly.<br>
-            Users can choose between two modes: a timed mode and a move count mode. Both modes can have either 20 or 30 cards depending on what the user wants. <br>
-            High scores for each mode and card count are stored on the server.<br>
-            Each player can pick a profile icon to represent them which is also stored on the server.<br>
-            The app has many themes the user can choose from to customize the appearance of the screen and cards.<br>
-            There is also some fun music that plays as well as touch noises. Both can be turned on or off in settings. 
-          </p>
-        </div>
-        <div class="tools">
-          <p>Android Studios</p>
-          <p>Java</p>
-          <p>XML</p>
-          <p>JSON / REST</p>
-          <p>Node</p>
-          <p>Express</p>
-          <p>MySQL</p>
-        </div>
-        <div class="pictureContainer">
-          <div class="pictureDesciption">
-            <img src="images/ethan/memory_home.png"/>
-            <p>View of the Memory homepage.</p>
+
+        <div class="projectContent" id="noteCollabContent">
+          <div class="textContainer">
+            <h3 class="textHeading">Overview</h3>
+            <p class="textProject">
+              Note Collab is a project that started out as a school project and was evolved to a far greater point afterward for fun. The app is geared towards idea generation sessions for designers and engineers as well as throughout the Agile process. In a nutshell, the teams can create sticky notes and collaborate with one another as they would on a whiteboard. During the initial development in class, I had a partner that was working on the front-end while I worked on the back-end. However, towards the end, after many tries of trying to get him to learn and understand React, I had to take over as a full-stack developer to finish the project on time. 
+            </p>
           </div>
-          <div class="pictureDesciption">
-            <img src="images/ethan/memory_game.png"/>
-            <p>View of the 20-card, timed mode of Memory.</p>
+          <div class="textContainer">
+            <h3 class="textHeading">Features</h3>
+            <p class="textProject">
+              Any number of socket namespaces or rooms can be created for multiple groups working on the site at once.<br>
+              Users can see who is online in their room as well as chat with the team in case they are not in a call or together in person.<br>
+              Room codes can be directly copied with the click of a button for easy sharing.<br>
+              Users can create, move, resize, and change the color of each singular note.<br>
+              Each note includes rich text editing through the Implementation of Facebook’s Draft framework.
+            </p>
           </div>
+          <div class="tools">
+            <p>HTML</p>
+            <p>CSS</p>
+            <p>React</p>
+            <p>Draft</p>
+            <p>Node</p>
+            <p>Socket.io</p>
+          </div>
+          <div class="picture-container">
+            <div class="noteCollab-slider" id="noteCollab-slider">
+              <div class="pictureDesciption">
+                <img src="images/ethan/note_one.png"/>
+                <p>View of a singular note when hovered over.</p>
+              </div>
+              <div class="pictureDesciption">
+                <img src="images/ethan/note_three.png"/>
+                <p>View of the navigation bar as well as example notes.</p>
+              </div>
+            </div>
+          </div>
+          <p class="backToTop"onclick="noteCollabContentToggle()">Show less</p>
         </div>
-        <p class="backToTop"onclick="memoryContentToggle()">Show less</p>
       </div>
-    </div>
 
 
 
 
-    <div class="project" id="drinkersChoice">
-      <div class="projectIntro">
-        <h1><strong>Drinker's Choice</strong></h1>
-        <p>An Android application for sharing beverages, for business promotions, and for users to get rides.</p>
-        <button id="drinkersChoiceShowMore" onclick="drinkersChoiceContentToggle()">Show more</button>
+      <div class="project" id="memory">
+        <div class="projectIntro">
+          <h1><strong>Memory</strong></h1>
+          <p>An Android mini-game for your mind.</p>
+          <button id="memoryShowMore" onclick="memoryContentToggle()">Show more</button>
+          <button onclick="window.open('https://github.com/youngethan4/All-In-One', '_blank')">View code</button>
+        </div>
+
+        <div class="projectContent" id="memoryContent">
+          <div class="textContainer">
+            <h3 class="textHeading">Overview</h3>
+            <p class="textProject">
+              This was my first experience with full-stack development, which required a lot of research and learning. For the back-end of the application, I was able to use my own personal server that I already owned for multiple years and utilize ssh. During development, I really messed around with as many options as I could as well as tried my hardest to focus on code reusability wherever I could. I was able to use the same game activity for all modes of the game which I was pleased by. While I really wanted to continue to make multiplayer support for the application, I lost interest after a while and did not want to continue down the gaming path.
+            </p>
+          </div>
+          <div class="textContainer">
+            <h3 class="textHeading">Features</h3>
+            <p class="textProject">
+              The login and create account fragment allow users to swipe between them effortlessly.<br>
+              Users can choose between two modes: a timed mode and a move count mode. Both modes can have either 20 or 30 cards depending on what the user wants. <br>
+              High scores for each mode and card count are stored on the server.<br>
+              Each player can pick a profile icon to represent them which is also stored on the server.<br>
+              The app has many themes the user can choose from to customize the appearance of the screen and cards.<br>
+              There is also some fun music that plays as well as touch noises. Both can be turned on or off in settings. 
+            </p>
+          </div>
+          <div class="tools">
+            <p>Android Studios</p>
+            <p>Java</p>
+            <p>XML</p>
+            <p>JSON / REST</p>
+            <p>Node</p>
+            <p>Express</p>
+            <p>MySQL</p>
+          </div>
+          <div class="pictureContainer">
+            <div class = "memory-slider" id="memory-slider">
+              <div class="pictureDesciption">
+                <img src="images/ethan/memory_home.png"/>
+                <p>View of the Memory homepage.</p>
+              </div>
+              <div class="pictureDesciption">
+                <img src="images/ethan/memory_game.png"/>
+                <p>View of the 20-card, timed mode of Memory.</p>
+              </div>
+            </div>
+          </div>
+          <p class="backToTop"onclick="memoryContentToggle()">Show less</p>
+        </div>
       </div>
 
-      <div class="projectContent" id="drinkersChoiceContent">
-        <div class="textContainer">
-          <h3 class="textHeading">Overview</h3>
-          <p class="textProject">
-            Drinker's Choice was another app I did as a class project that took my passion to a whole new level. This app was made for people to post drinks, get rides, and see business promotions about drinks. Throughout the project, I worked on the front-end side of development while implementing all the various features. There were still some bugs at the end of the semester that would have been squashed given enough time.
-          </p>
-          <p class="textProject">
-            Drinker’s Choice was my first major software team project, and the first time I lead a software team project. I took on this role because I am great at time management and always like to get assignments done well before their due dates. This experience taught me a lot about working with a team and the different schedules they may have. I also got to get experience with an agile-like development environment using the Trello board.
-          </p>
-        </div>
-        <div class="textContainer">
-          <h3 class="textHeading">Features</h3>
-          <p class="textProject">
-            Three separate user types (Drinkers, Drivers, and Businesses)  could log in with restrictions on what was visible to them.<br>
-            Drinker’s posts were able to be voted on, commented on, and sorted in various orders using a RecyclerView.<br>
-            Business users could post on the promotion thread to get users to buy their drinks.<br>
-            Drinkers were able to request a driver and talk to them via a chat.<br>
-            Drivers would be able to open the Drinker’s location via google maps for easy navigation.
-          </p>
-        </div>
-        <div class="tools">
-          <p>Android Studios</p>
-          <p>Java</p>
-          <p>XML</p>
-          <p>JSON / REST</p>
-          <p>WebSocket</p>
-        </div>
-        <div class="pictureContainer">
-          <div class="pictureDesciption">
-            <img src="images/ethan/dc_websocket.png"/>
-            <p>View of the websock feature for drinkers to chat with drivers.</p>
-          </div>
-          <div class="pictureDesciption">
-            <img src="images/ethan/dc_comments.png"/>
-            <p>View of the posts that drinkers can upload with their respective comments.</p>
-          </div>
-        </div>
-        <p class="backToTop"onclick="drinkersChoiceContentToggle()">Show less</p>
-      </div>
-    </div>
 
+
+
+      <div class="project" id="drinkersChoice">
+        <div class="projectIntro">
+          <h1><strong>Drinker's Choice</strong></h1>
+          <p>An Android application for sharing beverages, for business promotions, and for users to get rides.</p>
+          <button id="drinkersChoiceShowMore" onclick="drinkersChoiceContentToggle()">Show more</button>
+        </div>
+
+        <div class="projectContent" id="drinkersChoiceContent">
+          <div class="textContainer">
+            <h3 class="textHeading">Overview</h3>
+            <p class="textProject">
+              Drinker's Choice was another app I did as a class project that took my passion to a whole new level. This app was made for people to post drinks, get rides, and see business promotions about drinks. Throughout the project, I worked on the front-end side of development while implementing all the various features. There were still some bugs at the end of the semester that would have been squashed given enough time.
+            </p>
+            <p class="textProject">
+              Drinker’s Choice was my first major software team project, and the first time I lead a software team project. I took on this role because I am great at time management and always like to get assignments done well before their due dates. This experience taught me a lot about working with a team and the different schedules they may have. I also got to get experience with an agile-like development environment using the Trello board.
+            </p>
+          </div>
+          <div class="textContainer">
+            <h3 class="textHeading">Features</h3>
+            <p class="textProject">
+              Three separate user types (Drinkers, Drivers, and Businesses)  could log in with restrictions on what was visible to them.<br>
+              Drinker’s posts were able to be voted on, commented on, and sorted in various orders using a RecyclerView.<br>
+              Business users could post on the promotion thread to get users to buy their drinks.<br>
+              Drinkers were able to request a driver and talk to them via a chat.<br>
+              Drivers would be able to open the Drinker’s location via google maps for easy navigation.
+            </p>
+          </div>
+          <div class="tools">
+            <p>Android Studios</p>
+            <p>Java</p>
+            <p>XML</p>
+            <p>JSON / REST</p>
+            <p>WebSocket</p>
+          </div>
+          <div class="pictureContainer">
+            <div class="drinkersChoice-slider" id="drinkersChoice-slider">
+              <div class="pictureDesciption">
+                <img src="images/ethan/dc_websocket.png"/>
+                <p>View of the websock feature for drinkers to chat with drivers.</p>
+              </div>
+              <div class="pictureDesciption">
+                <img src="images/ethan/dc_comments.png"/>
+                <p>View of the posts that drinkers can upload with their respective comments.</p>
+              </div>
+            </div>
+          </div>
+          <p class="backToTop"onclick="drinkersChoiceContentToggle()">Show less</p>
+        </div>
+      </div>
+
+
+        
+        
+      <div class="project" id="hackISU">
+        <div class="projectIntro">
+          <h1><strong>HackISU Fall 2018</strong></h1>
+          <p>Creation of a tool for information hiding called SECRET.</p>
+          <button id="hackISUShowMore" onclick="hackISUContentToggle()">Show more</button>
+          <button onclick="window.open('https://github.com/youngethan4/HackISUProject', '_blank')">View code</button>
+        </div>
+
+        <div class="projectContent" id="hackISUContent">
+          <div class="textContainer">
+            <h3 class="textHeading">Overview</h3>
+            <p class="textProject">
+              At HackISU in November 2018, my team of four achieved first place in hardware hack and first place in ethical hack with our creation called SECRET. The main use of this system is for oppressed citizens living without free speech so they will be able to share sensitive information around the world. The device works by encrypting information and hiding it, as well as the encryption key, into photos so as to not be obvious. The information can then be retrieved after going through security and getting to a place that does allow for free speech.
+            </p>
+          </div>
+          <div class="textContainer">
+            <h3 class="textHeading">Features</h3>
+            <p class="textProject">
+              A microphone was used to gather atmospheric noise to achieve a random key and initialization vector for encrypting data. Through algorithms, we were easily able to convert the analog data from the microphone into digital I/O then to characters.<br>
+              The encryption key and encrypted data were embedded into photos using steganography and thrown on two separate hard drives.<br>
+              There are two buttons that can be pressed to encrypt and decrypt data with a light used as an indicator.
+            </p>
+          </div>
+          <div class="tools">
+            <p>Arduino</p>
+            <p>C</p>
+            <p>Python</p>
+            <p>Debian</p> 
+          </div>
+          <div class="pictureContainer">
+            <div class="pictureDesciption">
+              <img src="images/ethan/hackisu_secret.png"/>
+              <p>Picture of SECRET embedded system.</p>
+            </div>
+          </div>
+          <p class="backToTop"onclick="hackISUContentToggle()">Show less</p>
+        </div>
+      </div>
 
       
       
-    <div class="project" id="hackISU">
-      <div class="projectIntro">
-        <h1><strong>HackISU Fall 2018</strong></h1>
-        <p>Creation of a tool for information hiding called SECRET.</p>
-        <button id="hackISUShowMore" onclick="hackISUContentToggle()">Show more</button>
-        <button onclick="window.open('https://github.com/youngethan4/HackISUProject', '_blank')">View code</button>
-      </div>
+      <div class="project" id="website">
+        <div class="projectIntro">
+          <h1><strong>Portfolio Website</strong></h1>
+          <p>More insight of what it took to build the website you are currently viewing.</p>
+          <button id="websiteShowMore" onclick="websiteContentToggle()">Show more</button>
+          <button onclick="window.open('https://github.com/airrazor013/Web-Server')">View code</button>
+        </div>
 
-      <div class="projectContent" id="hackISUContent">
-        <div class="textContainer">
-          <h3 class="textHeading">Overview</h3>
-          <p class="textProject">
-            At HackISU in November 2018, my team of four achieved first place in hardware hack and first place in ethical hack with our creation called SECRET. The main use of this system is for oppressed citizens living without free speech so they will be able to share sensitive information around the world. The device works by encrypting information and hiding it, as well as the encryption key, into photos so as to not be obvious. The information can then be retrieved after going through security and getting to a place that does allow for free speech.
-          </p>
-        </div>
-        <div class="textContainer">
-          <h3 class="textHeading">Features</h3>
-          <p class="textProject">
-            A microphone was used to gather atmospheric noise to achieve a random key and initialization vector for encrypting data. Through algorithms, we were easily able to convert the analog data from the microphone into digital I/O then to characters.<br>
-            The encryption key and encrypted data were embedded into photos using steganography and thrown on two separate hard drives.<br>
-            There are two buttons that can be pressed to encrypt and decrypt data with a light used as an indicator.
-          </p>
-        </div>
-        <div class="tools">
-          <p>Arduino</p>
-          <p>C</p>
-          <p>Python</p>
-          <p>Debian</p> 
-        </div>
-        <div class="pictureContainer">
-          <div class="pictureDesciption">
-            <img src="images/ethan/hackisu_secret.png"/>
-            <p>Picture of SECRET embedded system.</p>
+        <div class="projectContent" id="websiteContent">
+          <div class="textContainer">
+            <h3 class="textHeading">Overview</h3>
+            <p class="textProject">
+              This website you are viewing now is hosted on my personal server. Throughout just the one year it has been alive, I have changed it many times to make it look more inviting and more usable. While I was using bootstrap for the navigation bar in an earlier version, I decided to create a custom navigation bar later as I wanted the width of the mobile drop-down to not go across the whole screen.
+            </p>
           </div>
+          <div class="textContainer">
+            <h3 class="textHeading">Features</h3>
+            <p class="textProject">
+              The backend is set up to host multiple domains as my friend, <a href="https://camdent.net" class="link">Camden Thomas</a> wanted to use my server for his portfolio as well.<br>
+              The contact form is set up to send an email when someone contacts me through this site.<br>
+              The site is 100% dynamic using flex boxes, CSS Grid, and viewport.
+            </p>
+          </div>
+          <div class="tools">
+            <p>HTML</p>
+            <p>SCSS</p>
+            <p>JavaScript</p>
+            <p>JQuery</p> 
+            <p>Node</p>
+            <p>Express</p>
+          </div>
+          <p class="backToTop"onclick="websiteContentToggle()">Show less</p>
         </div>
-        <p class="backToTop"onclick="hackISUContentToggle()">Show less</p>
-      </div>
-    </div>
-
-    
-    
-    <div class="project" id="website">
-      <div class="projectIntro">
-        <h1><strong>Portfolio Website</strong></h1>
-        <p>More insight of what it took to build the website you are currently viewing.</p>
-        <button id="websiteShowMore" onclick="websiteContentToggle()">Show more</button>
-        <button onclick="window.open('https://github.com/airrazor013/Web-Server')">View code</button>
-      </div>
-
-      <div class="projectContent" id="websiteContent">
-        <div class="textContainer">
-          <h3 class="textHeading">Overview</h3>
-          <p class="textProject">
-            This website you are viewing now is hosted on my personal server. Throughout just the one year it has been alive, I have changed it many times to make it look more inviting and more usable. While I was using bootstrap for the navigation bar in an earlier version, I decided to create a custom navigation bar later as I wanted the width of the mobile drop-down to not go across the whole screen.
-          </p>
-        </div>
-        <div class="textContainer">
-          <h3 class="textHeading">Features</h3>
-          <p class="textProject">
-            The backend is set up to host multiple domains as my friend, <a href="https://camdent.net" class="link">Camden Thomas</a> wanted to use my server for his portfolio as well.<br>
-            The contact form is set up to send an email when someone contacts me through this site.<br>
-            The site is 100% dynamic using flex boxes, CSS Grid, and viewport.
-          </p>
-        </div>
-        <div class="tools">
-          <p>HTML</p>
-          <p>SCSS</p>
-          <p>JavaScript</p>
-          <p>JQuery</p> 
-          <p>Node</p>
-          <p>Express</p>
-        </div>
-        <p class="backToTop"onclick="websiteContentToggle()">Show less</p>
       </div>
     </div>
 

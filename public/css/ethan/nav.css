@@ -3,7 +3,8 @@
   margin: 0;
   position: fixed;
   overflow: visible;
-  background: linear-gradient(90deg, #fc4a1a 0%, #f7b733 100%); }
+  background: linear-gradient(90deg, #fc4a1a 0%, #f7b733 100%);
+  z-index: 999; }
   @media screen and (max-width: 700px) {
     .nav {
       background: none; } }
