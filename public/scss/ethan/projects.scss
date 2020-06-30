@@ -115,7 +115,13 @@
   padding-top: 10px;
 }
 
-.slick-slide{
+.slick-track {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.slick-slide {
   &:hover{
     cursor: pointer;
   }
@@ -169,14 +175,13 @@
   margin-top: 25px;
   max-height: 500px;
   max-width: 100%;
-  margin: 0 auto;
 }
 
 .pictureDesciption {
 
   img{
     margin: 0 auto;
-    max-height: 500px;
+    max-height: 600px;
     max-width: 95%;
   }
 

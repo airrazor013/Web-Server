@@ -9,6 +9,7 @@ function seniorContentToggle() {
   let seniorDesign = '#seniorDesign';
   contentToggle(seniorDesign);
   traverseTo(seniorDesign);
+  $('.senior-slider').slick("refresh");
 };
 
 function noteCollabContentToggle () {
@@ -82,6 +83,8 @@ $(document).ready(() => {
   $(".memory-slider").slick(slickObj);
 
   $(".drinkersChoice-slider").slick(slickObj);
+
+  $(".senior-slider").slick(slickObj);
 });
 
 const slickObj = {
