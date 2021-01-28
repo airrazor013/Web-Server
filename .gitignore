@@ -1,6 +1,5 @@
 /node_modules
 /logs
-*.json
 */.well-known/*
 */.well-known
 *.well-known
